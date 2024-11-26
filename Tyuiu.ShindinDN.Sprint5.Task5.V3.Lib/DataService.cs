@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Globalization;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib
 {
@@ -9,16 +10,19 @@ namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib
             double res = 0;
             using (StreamReader reader = new StreamReader(path))
             {
+                IFormatProvider formatter = new NumberFormatInfo { NumberDecimalSeparator = "." };
                 string line;
                 double num;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    line = line.Replace(" ", " \r\n");
-                    num = Convert.ToDouble(line);
-                    num = Math.Round(num,3);
-                    if (num % 1 == 0)
+                    foreach (string snum in line.Split(' '))
                     {
-                        res = res + num;
+                        num = double.Parse(snum, formatter);
+                        num = Math.Round(num, 3);
+                        if (num % 1 == 0)
+                        {
+                            res = res + num;
+                        }
                     }
                 }
             }
