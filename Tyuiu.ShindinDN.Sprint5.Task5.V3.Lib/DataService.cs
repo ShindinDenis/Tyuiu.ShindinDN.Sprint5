@@ -10,14 +10,14 @@ namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib
             double res = 0;
             using (StreamReader reader = new StreamReader(path))
             {
-                IFormatProvider formatter = new NumberFormatInfo { NumberDecimalSeparator = "." };
+                IFormatProvider format = new NumberFormatInfo { NumberDecimalSeparator = "." };
                 string line;
                 double num;
                 while ((line = reader.ReadLine()) != null)
                 {
                     foreach (string snum in line.Split(' '))
                     {
-                        num = double.Parse(snum, formatter);
+                        num = double.Parse(snum, format);
                         num = Math.Round(num, 3);
                         if (num % 1 == 0)
                         {
