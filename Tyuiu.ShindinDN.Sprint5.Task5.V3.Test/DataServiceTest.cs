@@ -1,7 +1,6 @@
-﻿using Tyuiu.ShindinDN.Sprint5.Task4.V1.Lib;
-using System.IO;
+﻿using Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib;
 
-namespace Tyuiu.ShindinDN.Sprint5.Task4.V1.Test
+namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Test
 {
     [TestClass]
     public sealed class DataServiceTest
@@ -10,9 +9,9 @@ namespace Tyuiu.ShindinDN.Sprint5.Task4.V1.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask4V1.txt");
+            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask5V3.txt");
             FileInfo fileInfo = new FileInfo(path);
-            double wait = -3.680;
+            double wait = 35;
             double res = ds.LoadFromDataFile(path);
             Assert.AreEqual(wait, res);
         }
