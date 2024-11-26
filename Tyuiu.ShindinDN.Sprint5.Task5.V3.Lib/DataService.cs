@@ -16,6 +16,7 @@ namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib
                     line = line.Replace(".", ",");
                     line = line.Replace(" ", "\r\n");
                     num = Convert.ToDouble(line);
+                    num = Math.Round(num,3);
                     if (num % 1 == 0)
                     {
                         res = res + num;
