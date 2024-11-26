@@ -13,7 +13,6 @@ namespace Tyuiu.ShindinDN.Sprint5.Task5.V3.Lib
                 double num;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    line = line.Replace(".", ",");
                     line = line.Replace(" ", " \r\n");
                     num = Convert.ToDouble(line);
                     num = Math.Round(num,3);
