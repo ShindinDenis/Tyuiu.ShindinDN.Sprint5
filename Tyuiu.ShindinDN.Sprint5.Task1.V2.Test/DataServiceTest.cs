@@ -8,7 +8,7 @@ namespace Tyuiu.ShindinDN.Sprint5.Task1.V2.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
             FileInfo fileInfo = new FileInfo(path);
             DataService ds = new DataService();
             int startValue = -5;
